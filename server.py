@@ -19,7 +19,7 @@ def trimitere_mesaj_client(nume, mesaj, con):
         else:
             mesaj_client = mesaj.split(":")[1]
             nume_client = mesaj.split(":")[0]
-            send = client.send(f"{nume_client}:{mesaj_client}".encode("utf-8"))
+            client.send(f"{nume_client}:{mesaj_client}".encode("utf-8"))
 
 
 def gestioneaza_client(con, adres):
@@ -27,14 +27,28 @@ def gestioneaza_client(con, adres):
     clienti.append(con)
     print(f"Clientul sa conectat({nume}) la adresa:{adres}")
     while True:
+        try:
+            mesaj = con.recv(1024).decode("utf-8")
 
-        mesaj = con.recv(1024).decode("utf-8")
-        print(mesaj)
-        trimitere_mesaj_client(nume, mesaj, con)
+            if not mesaj:
+                print(f"{nume} s-a deconectat!")
+                con.close()
+                clienti.remove(con)
+                break
 
-        if "exit" in mesaj:
-            print(f"{nume[0]} a parasit chatul!")
+            print(mesaj)
+            trimitere_mesaj_client(nume, mesaj, con)
+
+            if "exit" in mesaj:
+                print(f"{nume} a parasit chatul!")
+                con.close()
+                clienti.remove(con)
+                break
+
+        except:
+            print(f"{nume} — conexiune pierduta!")
             con.close()
+            clienti.remove(con)
             break
 
 

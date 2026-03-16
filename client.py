@@ -16,7 +16,7 @@ def primeste_mesaj():
 
 def mesaj():
     while True:
-        mesaj = input()
+        mesaj=input('Eu:')
         if mesaj == "exit":
             print(f"{nume} a iesit!")
             client.send(f"{nume}:exit".encode("utf-8"))
