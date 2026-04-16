@@ -4,6 +4,7 @@ DNS_SERVER = "8.8.8.8"
 DNS_PORT = 53
 pachet = ""
 soc = s.socket(s.AF_INET, s.SOCK_DGRAM)
+soc.settimeout(3)
 while True:
     msg = input(">").strip()
     comanda = msg.split(" ")
@@ -31,16 +32,21 @@ while True:
         h = b"\xaa\xbb\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00"
         pachet=h+rezultat+f
         soc.sendto(pachet,(DNS_SERVER,DNS_PORT))
-        data,adresa=soc.recvfrom(512)
-        ip=data[-4:]
-        lista=list(ip)
-        saritura = 12 +4 +len(rezultat)
-        if f == b"\x00\x01\x00\x01":
-            ip_final = data[-4:]
-            lista = list(ip_final)
-            print(f"IP: {lista[0]}.{lista[1]}.{lista[2]}.{lista[3]}")
-        else:
-            print(f"Numele este: {data[saritura + 12:]}")
+        try:
+            data,adresa=soc.recvfrom(512)
+            ip=data[-4:]
+            lista=list(ip)
+            saritura = 12 +4 +len(rezultat)
+            if f == b"\x00\x01\x00\x01":
+                ip_final = data[-4:]
+                lista = list(ip_final)
+                print(f"IP: {lista[0]}.{lista[1]}.{lista[2]}.{lista[3]}")
+            else:
+                print(f"Numele este: {data[saritura + 12:]}")
+        except s.timeout:
+            print("Eroare: Serverul DNS nu răspunde. Verificați IP-ul serverului.")
+        except Exception as e:
+            print(f"A apărut o eroare: {e}")
     if comanda[0]=='use' and comanda[1]=='dns':
         DNS_SERVER=comanda[2]
         print(f"Acum folosim serverul DNS: {DNS_SERVER}")
