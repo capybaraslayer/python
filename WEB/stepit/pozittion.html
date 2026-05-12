@@ -51,18 +51,123 @@
             width: 250px;
             padding: 20px;
             background-color: orange;
-            
+
 
         }
-    
+        .card{
+            position:relative;
+            width: 300px;
+            height: 200px;
+            padding: 30px;
+            background-color:coral ;
+            border: 1px solid grey;
+            
+        }
+        .badge{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color:limegreen;
+            padding: 5px 10px;
+            color: white;
+        }
+        .input-box{
+            position: relative;
+            width: 360px;
+
+        }
+        .input-box input{
+            width: 100%;
+            padding: 12px 12px 12px 40px;
+            box-sizing: border-box;
+
+
+
+        }
+        .icon{
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .Whatsapp{
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: green;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 30px;
+
+        }
+
+        .header{
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            padding: 15px;
+            background-color: #222;
+            color: white;
+        }
+
+        .card{
+            margin-top: 100px;
+        }
+        .menu{
+            position: sticky;
+            top: 20px;
+            background-color: #222;
+            color: white;
+            padding: 15px;
+
+        }
+        .box{
+            position:absolute;
+            width: 150px;
+            height: 150px;
+        }
+        .blue{
+            background-color: blue;
+            top: 50px;
+            left: 50px;
+            z-index: 2;
+        }
+        .red{
+            background-color:red;
+            top:100px;
+            left: 100px;
+            z-index: 1;
+
+        }
+        .card1{
+            position:relative;
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            background-color:lightblue ;
+            border: 1px solid darkblue;
+
+
+        }
+        .badge1{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color:darkblue;
+            padding: 5px 10px;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <!--proprietatea pozition
     static;relative;absolut;fixed;stiky
-    -->
+
     <div class="box-static">Box static</div>
-    <!--La relativ se muta vizual da locul lui initial ramane rezervat-->
+    La relativ se muta vizual da locul lui initial ramane rezervat
     <div class="box-relativ">Box relativ</div>
     <div class="box-relativ1">Box relativ1</div>
     <div class="box-relativ2">Box relativ1</div>
@@ -70,6 +175,42 @@
 
     <div class="box-absolut">Box absolut</div>
     <p>Text dupa ploc absolut</p>
+    Blocuri absolute
+    <div class="card">
+        <span class="badge">New</span>
+        <h2>Produs</h2>
+        <p>Descriere produs</p>
+    </div>
+    <div class="input-box">
+        <span class="icon"><img src="search_icon.png"/></span>
+        <input type="text" placeholder="Cauta..."/>
+    </div>
+    </div>
+    Position fixed
+    <header class="header">Meniul site-lui</header>
+    <main>
+        <p>
+            Foarte mult continut
+        </p>
+    </main>
+    <a href="#" class="Whatsapp">Whatsapp</a>
+
+    position sticky
+    <nav class="menu">Meniu sticky</nav>
+    <section>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint neque quaerat distinctio qui magni nobis cupiditate debitis ex blanditiis. Culpa qui veritatis dignissimos natus soluta, excepturi consequatur quod repudiandae enim, libero cupiditate hic? Quos ab autem laboriosam modi consectetur libero, cum vel optio reprehenderit in numquam fuga at ullam. Quia, inventore rerum. Natus odio alias velit mollitia adipisci voluptas sapiente et error dicta distinctio, enim facilis at quae aliquam vel perferendis quos corporis rerum voluptates exercitationem iste provident? Veniam laborum asperiores voluptates at provident inventore fugit eius ullam neque tempore rerum ad, quidem quae a voluptas vero omnis ducimus aspernatur soluta ex iste. Veniam consequatur enim esse, corporis tempora minus consectetur adipisci minima porro! Quos qui praesentium dolores ea nulla sint minus ipsam iusto impedit laudantium esse alias, quam quia harum, ex voluptas voluptatem hic deserunt quas minima animi doloribus incidunt dolorum consectetur? Laboriosam ad quasi hic, nostrum deleniti incidunt quo enim sequi! Maiores, voluptate laudantium corrupti impedit magnam eius officiis ex! Adipisci magnam ratione nisi corrupti porro impedit eveniet maxime optio tempore, mollitia totam eos necessitatibus laboriosam modi voluptate ea odit, omnis minus magni dolorum! Qui nostrum vero temporibus ipsa debitis maxime odio quisquam suscipit repellendus iste aspernatur, dolore, in natus, exercitationem animi molestias nobis neque laborum minus. Rem quod consectetur, unde accusamus vero, fugiat labore atque magnam deleniti quidem provident. Animi rerum velit beatae cupiditate eaque harum placeat, voluptatum, impedit, libero quis at autem laudantium veritatis possimus iure molestias dolores a cumque? Expedita provident labore eligendi consequatur excepturi velit suscipit incidunt aliquid, aspernatur quos perferendis. Esse distinctio, dolor ut, non explicabo excepturi voluptates quod aliquid iste iusto itaque nisi corporis obcaecati tempore voluptatibus laborum accusamus consequatur debitis. Eos, consectetur quos! Distinctio mollitia earum quasi hic ab, officia ullam inventore reprehenderit sapiente atque perferendis at quaerat deleniti explicabo suscipit consequatur magni odit ad nostrum et perspiciatis quos placeat voluptate. Animi, temporibus! Iure, officia! Obcaecati, amet voluptates nihil reiciendis voluptatem est illo odit! Quaerat eius officia quas, corporis animi illo dolorem saepe dignissimos ex eveniet quo harum distinctio, assumenda doloribus ipsum esse nisi aliquam quia tenetur officiis quod rerum voluptatem enim perferendis? Adipisci quam sit eius optio autem a praesentium sed corporis voluptas consectetur, minus soluta illum illo deserunt ipsum hic ratione dolorem, ea saepe ad? Suscipit dolorum voluptates ab, maiores, maxime assumenda exercitationem non veritatis minus iure culpa omnis amet ducimus recusandae alias consequatur accusantium, vel rem. At qui iure, iste reprehenderit similique corporis nesciunt aliquam aperiam recusandae deserunt explicabo sed debitis harum cum culpa excepturi tempore illo. Corrupti repellendus deserunt voluptates quis excepturi dolore, dicta sed cumque beatae, vero explicabo quo commodi placeat! Inventore sint animi libero quas ipsam iure porro consequatur vel aut qui facilis, ab asperiores nam accusantium! Dolor libero animi sint iste. Excepturi maiores explicabo ab non a reprehenderit molestiae quas iste voluptatum qui autem neque reiciendis nobis magni perspiciatis labore accusamus possimus quam nam laborum, debitis recusandae pariatur accusantium in! Neque ex soluta inventore aliquid atque aspernatur? Libero nisi consequuntur, delectus eveniet quibusdam pariatur!
+        </p>
+    </section> 
+    z-index
+    <div class="box blue">Albastru</div>
+    <div class="box red">Red</div>-->
+    <div class="card1">
+        <p>Produs</p>
+        <p>Pret:100 lei</p>
+    </div>
+    <div class="badge1">
+        <p>New 12</p>
+    </div>
 
 </body>
 </html>
