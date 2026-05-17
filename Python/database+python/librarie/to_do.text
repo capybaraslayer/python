@@ -1,0 +1,23 @@
+BIBLIOTECA - Sistem de gestiune
+
+DONE:
+  - Import carti din CSV
+  - Adaugare utilizatori
+
+
+IN PROGRES:
+  - Functia imprumuta_carte() - started, neterminata
+  -trebuie sa ma mai uit la tabele pentru ca nus tare bine facute
+  -Functia de stergere a tabelor ar mai trebuit de facut ceva cu ea
+  -trebuie sa ma uit sa pun autori
+  -locatiile la cei care vin sa imprumute
+
+
+TODO:
+
+    -rezerva_carte() - utilizatorul rezerva o carte indisponibila
+  - lista_asteptare() - adauga userul la coada daca stock = 0
+  - reinnoire_imprumut() - prelungeste termenul cu inca 14 zile
+  - blocare_user() - userul nu poate imprumuta daca are penalizari neplatite
+  - istoric_user() - afiseaza toate cartile imprumutate de un user
+
